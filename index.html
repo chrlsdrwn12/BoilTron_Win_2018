@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>BoilTron</title>
+    <link rel="stylesheet" href="src/css/bootstrap.min.css">
+    <link rel="stylesheet" href="src/css/jquery-ui.css">
+    <link rel="stylesheet" href="src/css/photon.css">
+    <!-- Insert this line above script imports  -->
+    <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+    <script src="src/js/jquery.js"></script>
+    <script src="src/js/jquery-ui.js"></script>
+    <!-- Insert this line after script imports -->
+    <script>if (window.module) module = window.module;</script>
+    <style>
+        .wrapper, body{overflow: hidden;}
+        .textdemo{width: 100%;height: 100%;position: absolute;background: #ffffff;text-align: center;padding-top: 150px;}
+    </style>
+  </head>
+  <body>
+  	<div class="window">
+  	<div class="window-content">
+        <div class="pane-group">
+
+          <div class="pane">
+          	<div class="textdemo">Electron Boilerplate by Darwin Lopena. 2018.</div>
+          </div>
+
+        </div>
+      </div>
+      <footer class="toolbar toolbar-footer">
+		  <div class="toolbar-actions">
+		    <button class="btn btn-default" id="cancel">
+		      Cancel
+		    </button>
+        <button class="btn btn-primary" id="leftbut">
+          LeftButton
+        </button>
+        <button class="btn btn-primary pull-right" id="disabledbut" disabled>
+          DisabledButton
+        </button>
+        <button class="btn btn-primary pull-right" id="rightbut">
+          RightButton
+        </button>
+        <!-- <button class="btn btn-primary pull-right" id="testbut">
+          Test
+        </button> -->
+		  </div>
+		</footer>
+    </div>
+
+    <script>
+      // You can also require other files to run in this process
+      require('./renderer.js');
+    </script>
+  </body>
+</html>
